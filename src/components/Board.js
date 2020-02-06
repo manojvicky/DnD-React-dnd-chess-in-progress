@@ -2,15 +2,16 @@ import React from "react";
 import Knight from "./Knight";
 // import {moveKnight, canMoveKnight} from "./Game";
 import { DndProvider } from 'react-dnd';
-import Backend from 'react-dnd-html5-backend';
+// import Backend from 'react-dnd-html5-backend';
 import BoardSquare from './BoardSquare';
+import TouchBackend from 'react-dnd-touch-backend'
 // function handleKnight(x, y){
 //   console.log('handleKnight', x,y, canMoveKnight(x,y));
 //   if(canMoveKnight(x, y)){
 //     moveKnight(x,y);
 //   }
 // }
-
+console.log('TouchBackend', TouchBackend);
 function renderPiece(x, y, [knightX, knightY]) {
   if (x === knightX && y === knightY) {
     return <Knight />
@@ -36,7 +37,7 @@ function Board(props) {
   }
   console.log("==>", squares, x);
   return <div className="board">
-    <DndProvider backend={Backend}>
+    <DndProvider backend={TouchBackend}>
       {squares}
     </DndProvider>
   </div>;
