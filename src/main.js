@@ -2,10 +2,10 @@ import React from "react";
 import Board from "./components/Board";
 import "./styles.css";
 
-function Main() {
+function Main({knightPosition}) {
   return (
     <div className="App">
-      <Board knightPosition={[0, 3]} />
+      <Board knightPosition={knightPosition} />
     </div>
   );
 }
