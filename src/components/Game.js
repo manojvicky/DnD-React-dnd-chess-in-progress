@@ -1,4 +1,4 @@
-let knightPosition = [0, 0]
+let knightPosition = [5, 5]
 let observer = null
 
 function emitChange() {
